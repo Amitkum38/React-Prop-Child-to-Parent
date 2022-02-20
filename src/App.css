@@ -1,0 +1,17 @@
+html { box-sizing: border-box; }
+html *, html *:after, html *:before { box-sizing: inherit; }
+body { min-height: 100vh; display: flex; justify-content: center; align-items: center; line-height: 1.6; font-family: 'El Messiri', sans-serif; }
+body::before { content: ' '; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: url("https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/8972451/2019/3/28/34ad0407-17c3-4d57-b587-38bdf83085cb1553772641514-Kook-N-Keech-Marvel-Men-Black-Marvel-Printed-Round-Neck-T-sh-2.jpg") 0 0/cover no-repeat; z-index: -1; }
+.card {  max-width: 18.5em; margin: 1em; padding: 1em; background: #fff; float: left;}
+.card__title { margin: 0 auto 1em; color: #333; text-align: center; text-transform: capitalize; font-size: 1.2em;}
+.card__img { display: block; width: 20em; max-width: 100%; margin: 1em auto; border-radius: 2px; }
+.card__text { margin: 1em 5%; color: #646464; }
+.card__btn { display: table; padding: .7em 4em; background:#2a2b2f; color: #fff; text-decoration: none; text-transform: uppercase; margin: 1em auto 0; }
+.card--12 {--mouseX12: 0; --mouseY12: 0; perspective: 700px; }
+.card--12 .card__title {transform: translate3d(calc(var(--mouseY12) * 1px), calc(var(--mouseX12) * 1px), 0);}
+.card--12 .card__img {
+ transform: translate3d(calc(var(--mouseY12) * 1px), calc(var(--mouseX12) * -1px), calc(var(--mouseY12) * 1px));}
+.card--12 .card__text {
+ transform: translate3d(calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px), 0);}
+.card--12 .card__btn {
+ transform: translate3d(calc(var(--mouseX12) * -1px), calc(var(--mouseY12) * -1px), calc(var(--mouseX12) * -1px));}
